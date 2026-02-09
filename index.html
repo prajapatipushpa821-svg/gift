@@ -18,7 +18,6 @@ body {
   background: linear-gradient(-45deg,#ff6a88,#ff99ac,#6a11cb,#2575fc);
   background-size: 400% 400%;
   animation: gradient 10s ease infinite;
-  overflow: hidden;
 }
 
 @keyframes gradient {
@@ -74,6 +73,7 @@ button:hover {
   display: none;
   margin-top: 20px;
   font-size: 18px;
+  line-height: 1.6;
   animation: fade 2s ease;
 }
 
@@ -88,17 +88,21 @@ button:hover {
 
 <div class="container">
   <div class="heart">❤️</div>
-  <h1>For Someone Special</h1>
+  <h1>For You</h1>
 
   <button onclick="showMessage()">Ek baat bolun?</button>
 
   <div class="message" id="msg">
-    Kuch log zindagi me special hote hain...  
-    Aur tum unme se ho.  
-    Tum important ho... aur rahoge. ✨
+    Shayad duniya me sab replace ho sakta hai…  
+    Par mere liye tum nahi.  
+    <br><br>
+    Tum sirf special nahi ho…  
+    Tum important ho.  
+    <br><br>
+    Aur chahe waqt badle ya situations badle…  
+    Meri parwah tumhare liye hamesha rahegi. ✨
   </div>
 
-  <!-- Background Music -->
   <audio autoplay loop>
     <source src="https://pagalnew.com/download320/33092" type="audio/mp3">
   </audio>
