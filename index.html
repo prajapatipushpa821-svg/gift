@@ -1,0 +1,245 @@
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins&display=swap" rel="stylesheet">
+
+<style>
+body{
+ margin:0;
+ height:100vh;
+ display:flex;
+ justify-content:center;
+ align-items:center;
+ background:linear-gradient(135deg,#141e30,#243b55);
+ font-family:'Poppins',sans-serif;
+ overflow:hidden;
+ color:white;
+ text-align:center;
+}
+
+/* Gift Box */
+.gift{
+ font-size:90px;
+ cursor:pointer;
+ animation:shake 1.5s infinite;
+}
+
+@keyframes shake{
+ 0%{transform:rotate(0deg);}
+ 25%{transform:rotate(3deg);}
+ 50%{transform:rotate(-3deg);}
+ 75%{transform:rotate(2deg);}
+ 100%{transform:rotate(0deg);}
+}
+
+.container{
+ display:none;
+ background:rgba(255,255,255,0.08);
+ backdrop-filter:blur(15px);
+ padding:35px;
+ border-radius:25px;
+ width:85%;
+ max-width:360px;
+ box-shadow:0 0 35px rgba(255,255,255,0.15);
+}
+
+.title{
+ font-family:'Great Vibes',cursive;
+ font-size:40px;
+ margin-bottom:10px;
+}
+
+.message{
+ margin-top:20px;
+ font-size:18px;
+ line-height:1.6;
+ min-height:80px;
+}
+
+/* Floating hearts */
+.heart{
+ position:fixed;
+ font-size:18px;
+ animation:float 6s linear infinite;
+ opacity:0.6;
+}
+
+@keyframes float{
+ from{transform:translateY(100vh);}
+ to{transform:translateY(-10vh);}
+}
+</style>
+
+<script>
+setInterval(()=>{
+ let h=document.createElement("div");
+ h.className="heart";
+ h.innerHTML="💖";
+ h.style.left=Math.random()*100+"vw";
+ h.style.animationDuration=(4+Math.random()*3)+"s";
+ document.body.appendChild(h);
+ setTimeout(()=>h.remove(),6000);
+},400);
+</script>
+
+<!-- Gift Box -->
+<div class="gift" onclick="openGift()">🎁</div>
+
+<!-- Card -->
+<div class="container" id="card">
+
+<div class="title">Someone Cares 💖</div>
+
+<div class="message" id="text"></div>
+
+</div>
+
+<!-- Song -->
+<iframe id="music" width="0" height="0"></iframe>
+
+<script>
+
+const msg = "Kabhi kabhi life me kuch log aise milte hain jo bina reason ke important ban jaate hain... Tum un logon me se ho. Shayad ye gift chhota sa hai, par isme ek sach chhupa hai — tum special ho, aur tumhari jagah kisi aur se replace nahi ho sakti ✨";
+
+let i=0;
+
+function openGift(){
+
+ document.querySelector(".gift").style.display="none";
+ document.getElementById("card").style.display="block";
+
+ document.getElementById("music").src =
+ "https://www.youtube.com/embed/tzZl6F0y4xE?autoplay=1&loop=1&playlist=tzZl6F0y4xE";
+
+ function type(){
+   if(i < msg.length){
+     document.getElementById("text").innerHTML += msg.charAt(i);
+     i++;
+     setTimeout(type,35);
+   }
+ }
+
+ type();
+}
+
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins&display=swap" rel="stylesheet">
+
+<style>
+body{
+ margin:0;
+ height:100vh;
+ display:flex;
+ justify-content:center;
+ align-items:center;
+ background:linear-gradient(135deg,#141e30,#243b55);
+ font-family:'Poppins',sans-serif;
+ overflow:hidden;
+ color:white;
+ text-align:center;
+}
+
+/* Gift Box */
+.gift{
+ font-size:90px;
+ cursor:pointer;
+ animation:shake 1.5s infinite;
+}
+
+@keyframes shake{
+ 0%{transform:rotate(0deg);}
+ 25%{transform:rotate(3deg);}
+ 50%{transform:rotate(-3deg);}
+ 75%{transform:rotate(2deg);}
+ 100%{transform:rotate(0deg);}
+}
+
+.container{
+ display:none;
+ background:rgba(255,255,255,0.08);
+ backdrop-filter:blur(15px);
+ padding:35px;
+ border-radius:25px;
+ width:85%;
+ max-width:360px;
+ box-shadow:0 0 35px rgba(255,255,255,0.15);
+}
+
+.title{
+ font-family:'Great Vibes',cursive;
+ font-size:40px;
+ margin-bottom:10px;
+}
+
+.message{
+ margin-top:20px;
+ font-size:18px;
+ line-height:1.6;
+ min-height:80px;
+}
+
+/* Floating hearts */
+.heart{
+ position:fixed;
+ font-size:18px;
+ animation:float 6s linear infinite;
+ opacity:0.6;
+}
+
+@keyframes float{
+ from{transform:translateY(100vh);}
+ to{transform:translateY(-10vh);}
+}
+</style>
+
+<script>
+setInterval(()=>{
+ let h=document.createElement("div");
+ h.className="heart";
+ h.innerHTML="💖";
+ h.style.left=Math.random()*100+"vw";
+ h.style.animationDuration=(4+Math.random()*3)+"s";
+ document.body.appendChild(h);
+ setTimeout(()=>h.remove(),6000);
+},400);
+</script>
+
+<!-- Gift Box -->
+<div class="gift" onclick="openGift()">🎁</div>
+
+<!-- Card -->
+<div class="container" id="card">
+
+<div class="title">Someone Cares 💖</div>
+
+<div class="message" id="text"></div>
+
+</div>
+
+<!-- Song -->
+<iframe id="music" width="0" height="0"></iframe>
+
+<script>
+
+const msg = "Kabhi kabhi life me kuch log aise milte hain jo bina reason ke important ban jaate hain... Tum un logon me se ho. Shayad ye gift chhota sa hai, par isme ek sach chhupa hai — tum special ho, aur tumhari jagah kisi aur se replace nahi ho sakti ✨";
+
+let i=0;
+
+function openGift(){
+
+ document.querySelector(".gift").style.display="none";
+ document.getElementById("card").style.display="block";
+
+ document.getElementById("music").src =
+ "https://www.youtube.com/embed/tzZl6F0y4xE?autoplay=1&loop=1&playlist=tzZl6F0y4xE";
+
+ function type(){
+   if(i < msg.length){
+     document.getElementById("text").innerHTML += msg.charAt(i);
+     i++;
+     setTimeout(type,35);
+   }
+ }
+
+ type();
+}
+
+   </script>
+   
